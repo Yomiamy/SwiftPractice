@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC36ABA42AAE154A00863113 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC36ABA22AAE154A00863113 /* CustomTableViewController.swift */; };
+		CC36ABA52AAE154A00863113 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC36ABA32AAE154A00863113 /* CustomTableViewCell.swift */; };
 		CCBFA2ED2AA77F49000E70BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBFA2EC2AA77F49000E70BB /* AppDelegate.swift */; };
 		CCBFA2EF2AA77F49000E70BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBFA2EE2AA77F49000E70BB /* SceneDelegate.swift */; };
 		CCBFA2F12AA77F49000E70BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBFA2F02AA77F49000E70BB /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC36ABA22AAE154A00863113 /* CustomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
+		CC36ABA32AAE154A00863113 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		CCBFA2E92AA77F49000E70BB /* UIKitPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCBFA2EC2AA77F49000E70BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCBFA2EE2AA77F49000E70BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC36ABA12AAE12EB00863113 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				CC36ABA32AAE154A00863113 /* CustomTableViewCell.swift */,
+				CC36ABA22AAE154A00863113 /* CustomTableViewController.swift */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
 		CCBFA2E02AA77F49000E70BB = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +112,7 @@
 		CCBFA2EB2AA77F49000E70BB /* UIKitPractice */ = {
 			isa = PBXGroup;
 			children = (
+				CC36ABA12AAE12EB00863113 /* UITableView */,
 				CCBFA2EC2AA77F49000E70BB /* AppDelegate.swift */,
 				CCBFA2EE2AA77F49000E70BB /* SceneDelegate.swift */,
 				CCBFA2F02AA77F49000E70BB /* ViewController.swift */,
@@ -258,6 +272,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC36ABA42AAE154A00863113 /* CustomTableViewController.swift in Sources */,
+				CC36ABA52AAE154A00863113 /* CustomTableViewCell.swift in Sources */,
 				CCBFA2F12AA77F49000E70BB /* ViewController.swift in Sources */,
 				CCBFA2ED2AA77F49000E70BB /* AppDelegate.swift in Sources */,
 				CCBFA2EF2AA77F49000E70BB /* SceneDelegate.swift in Sources */,
@@ -441,6 +457,7 @@
 				DEVELOPMENT_TEAM = H2724L9BS5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UIKitPractice/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Test;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -471,6 +488,7 @@
 				DEVELOPMENT_TEAM = H2724L9BS5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UIKitPractice/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Test;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
