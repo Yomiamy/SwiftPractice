@@ -9,17 +9,28 @@ import UIKit
 
 class CustomStaticCellTableViewController: UITableViewController {
 
+    var mNextPageVC: UIViewController? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        mNextPageVC = storyboard?.instantiateViewController(withIdentifier: "Page2")
+        mNextPageVC?.hidesBottomBarWhenPushed = true
+        
+        // self.navigationController?.navigationBar.isHidden = true
     }
 
+    // MARK: - UITableViewDelegate
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         0
     }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        0
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.navigationController?.pushViewController(self.mNextPageVC!, animated: true)
+    }
+    
+    
 }
