@@ -27,9 +27,19 @@ class ViewController: UIViewController {
             size: CGSize(width: 100, height: 100)))
         self.view.addSubview(imageView)
         
-        imageView.image = UIImage.animatedImageNamed("giphy-", duration: 2)
-        
-        
+        imageView.animationImages = {
+            var images = [UIImage]()
+            
+            for i in 0...10 {
+                images.append(UIImage(named: "giphy-\(i)")!)
+            }
+            
+            return images
+        } ()
+        imageView.animationDuration = 2
+        imageView.animationRepeatCount = 2
+        imageView.image = imageView.animationImages?.first
+        imageView.startAnimating()
     }
 }
 
