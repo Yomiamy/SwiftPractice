@@ -6,65 +6,30 @@
 //
 
 import UIKit
-import IOSSecuritySuite
-import AVFAudio
+import Alamofire
 
 
-class ViewController: UIViewController,
-                      UITableViewDataSource,
-                      UITableViewDelegate{
-    
-    @IBOutlet weak var tableView: UITableView!
-    
-    private let strArray = ["StrA", "StrB", "StrC", "StrD"]
-    private let synthesizer = AVSpeechSynthesizer()
-    
+class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
         
         initView()
+        
     }
+    
     
     func initView() {
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
-        self.tableView.estimatedRowHeight = UITableView.automaticDimension
-        self.tableView.rowHeight = UITableView.automaticDimension
         
-        tableView.register(UINib(nibName: "\(CusomTableViewCell2.self)", bundle: nil), forCellReuseIdentifier: "\(CusomTableViewCell2.self)")
-    }
-    
-    
-    // MARK: - UITableViewDataSource
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        strArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\("\(CusomTableViewCell2.self)")") as? CusomTableViewCell2 else {
-            fatalError("No cell initialized")
-        }
+        let imageView = UIImageView(frame: CGRect(
+            origin: CGPoint(x: 20, y: 20),
+            size: CGSize(width: 100, height: 100)))
+        self.view.addSubview(imageView)
         
-        cell.lbItem.text = strArray[indexPath.row]
-        return cell
-    }
-    
-    // MARK: - UITableViewDelegate
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        100.0
-//    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let utterance = AVSpeechUtterance(string: strArray[indexPath.row])
-        utterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
-        synthesizer.speak(utterance)
+        imageView.image = UIImage.animatedImageNamed("giphy-", duration: 2)
         
-        tableView.deselectRow(at: indexPath, animated: true)
+        
     }
-    
-
 }
 

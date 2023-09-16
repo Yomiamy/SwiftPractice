@@ -16,31 +16,11 @@
                     <view key="view" contentMode="scaleToFill" id="2aT-jC-A5K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cjE-6n-4iq">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="PI4-kX-lEi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="PI4-kX-lEi" firstAttribute="trailing" secondItem="cjE-6n-4iq" secondAttribute="trailing" id="0le-fe-3uK"/>
-                            <constraint firstItem="cjE-6n-4iq" firstAttribute="top" secondItem="PI4-kX-lEi" secondAttribute="top" id="8et-l8-kLC"/>
-                            <constraint firstItem="PI4-kX-lEi" firstAttribute="bottom" secondItem="cjE-6n-4iq" secondAttribute="bottom" id="Wqx-Oz-yJG"/>
-                            <constraint firstItem="cjE-6n-4iq" firstAttribute="leading" secondItem="PI4-kX-lEi" secondAttribute="leading" id="hbS-yx-EP1"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="tableView" destination="cjE-6n-4iq" id="zI4-lG-tYt"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hw6-MF-mJX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="y4a-Il-lph">
-                    <connections>
-                        <action selector="onTapImageView:" destination="5ND-1K-ZpC" id="kjI-0I-SNS"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3036" y="-1560"/>
         </scene>
