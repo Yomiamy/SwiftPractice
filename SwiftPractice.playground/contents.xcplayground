@@ -3,5 +3,6 @@
     <pages>
         <page name='AsyncAwaitSample1'/>
         <page name='ImageWithOverlap'/>
+        <page name='SafariVC'/>
     </pages>
 </playground>
