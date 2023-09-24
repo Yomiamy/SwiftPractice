@@ -6,5 +6,6 @@
         <page name='SafariVC'/>
         <page name='DateFormat'/>
         <page name='CGAffineTransformSample'/>
+        <page name='HighOrderFunction'/>
     </pages>
 </playground>
