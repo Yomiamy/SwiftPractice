@@ -10,5 +10,6 @@
         <page name='HighOrderFunction'/>
         <page name='DictionarySample'/>
         <page name='ComputedPropertySample'/>
+        <page name='PropertyObserverSample'/>
     </pages>
 </playground>
