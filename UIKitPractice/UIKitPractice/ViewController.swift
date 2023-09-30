@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Alamofire
+import IOSSecuritySuite
 
 
 class ViewController: UIViewController {
@@ -17,6 +17,8 @@ class ViewController: UIViewController {
         
         initView()
         
+        
+
     }
     
     
