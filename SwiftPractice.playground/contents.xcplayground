@@ -11,5 +11,6 @@
         <page name='DictionarySample'/>
         <page name='ComputedPropertySample'/>
         <page name='PropertyObserverSample'/>
+        <page name='EnumSample'/>
     </pages>
 </playground>
