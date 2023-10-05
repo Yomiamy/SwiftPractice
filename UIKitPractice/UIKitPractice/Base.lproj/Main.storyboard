@@ -16,11 +16,37 @@
                     <view key="view" contentMode="scaleToFill" id="2aT-jC-A5K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iC9-ll-25F">
+                                <rect key="frame" x="87" y="79" width="240" height="240"/>
+                                <color key="backgroundColor" red="0.89803922179999995" green="0.87843137979999997" blue="0.87450981139999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="dae-w3-VWP"/>
+                                    <constraint firstAttribute="width" secondItem="iC9-ll-25F" secondAttribute="height" multiplier="1:1" id="fsr-j5-hFh"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="y4a-Il-lph" appends="YES" id="5jC-Wq-Ibu"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="PI4-kX-lEi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iC9-ll-25F" firstAttribute="top" secondItem="PI4-kX-lEi" secondAttribute="top" constant="59" id="7wQ-bE-zI2"/>
+                            <constraint firstItem="iC9-ll-25F" firstAttribute="centerX" secondItem="PI4-kX-lEi" secondAttribute="centerX" id="Ek9-fA-cZs"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="iC9-ll-25F" id="73Q-YY-bzB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hw6-MF-mJX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="y4a-Il-lph">
+                    <connections>
+                        <action selector="onTapImageView:" destination="5ND-1K-ZpC" id="kjI-0I-SNS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3036" y="-1560"/>
         </scene>

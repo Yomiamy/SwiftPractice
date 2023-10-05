@@ -9,39 +9,40 @@ import UIKit
 import IOSSecuritySuite
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,
+                      UIImagePickerControllerDelegate,
+                      UINavigationControllerDelegate {
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        initView()
-        
-        
-
     }
     
     
-    func initView() {
-        
-        let imageView = UIImageView(frame: CGRect(
-            origin: CGPoint(x: 20, y: 20),
-            size: CGSize(width: 100, height: 100)))
-        self.view.addSubview(imageView)
-        
-        imageView.animationImages = {
-            var images = [UIImage]()
+    @IBAction func onTapImageView(_ sender: Any) {
+        print("onTapImageView")
+        self.selectPhoto()
+    }
+    
+    func selectPhoto() {
+        let picker = UIImagePickerController()
+        picker.sourceType = .camera
+        picker.allowsEditing = true
+        picker.delegate = self
+        present(picker, animated: true)
+    }
+    
+    // MARK: - UIImagePickerControllerDelegate
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.originalImage] as? UIImage else {
+            return
             
-            for i in 0...10 {
-                images.append(UIImage(named: "giphy-\(i)")!)
-            }
-            
-            return images
-        } ()
-        imageView.animationDuration = 2
-        imageView.animationRepeatCount = 2
-        imageView.image = imageView.animationImages?.first
-        imageView.startAnimating()
+        }
+        
+        self.imageView.image = image
+        dismiss(animated: true)
     }
 }
 
