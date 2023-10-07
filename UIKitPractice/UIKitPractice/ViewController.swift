@@ -7,42 +7,64 @@
 
 import UIKit
 import IOSSecuritySuite
+import AVFAudio
 
 
 class ViewController: UIViewController,
-                      UIImagePickerControllerDelegate,
-                      UINavigationControllerDelegate {
+                      UITableViewDataSource,
+                      UITableViewDelegate{
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    private let strArray = ["StrA", "StrB", "StrC", "StrD"]
+    private let synthesizer = AVSpeechSynthesizer()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initView()
+    }
+    
+    func initView() {
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.estimatedRowHeight = UITableView.automaticDimension
+        self.tableView.rowHeight = UITableView.automaticDimension
+        
+        tableView.register(UINib(nibName: "\(CusomTableViewCell2.self)", bundle: nil), forCellReuseIdentifier: "\(CusomTableViewCell2.self)")
     }
     
     
-    @IBAction func onTapImageView(_ sender: Any) {
-        print("onTapImageView")
-        self.selectPhoto()
+    // MARK: - UITableViewDataSource
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        strArray.count
     }
     
-    func selectPhoto() {
-        let picker = UIImagePickerController()
-        picker.sourceType = .camera
-        picker.allowsEditing = true
-        picker.delegate = self
-        present(picker, animated: true)
-    }
-    
-    // MARK: - UIImagePickerControllerDelegate
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let image = info[.originalImage] as? UIImage else {
-            return
-            
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\("\(CusomTableViewCell2.self)")") as? CusomTableViewCell2 else {
+            fatalError("No cell initialized")
         }
         
-        self.imageView.image = image
-        dismiss(animated: true)
+        cell.lbItem.text = strArray[indexPath.row]
+        return cell
     }
+    
+    // MARK: - UITableViewDelegate
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        100.0
+//    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let utterance = AVSpeechUtterance(string: strArray[indexPath.row])
+        utterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
+        synthesizer.speak(utterance)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+
 }
 
