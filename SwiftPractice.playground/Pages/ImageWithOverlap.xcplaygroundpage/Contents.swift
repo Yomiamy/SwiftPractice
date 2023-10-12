@@ -9,6 +9,7 @@ winnieImageView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 
 winnieImageView.backgroundColor = UIColor(red: 10/255, green: 186/255, blue: 181/255, alpha: 1)
 winnieImageView.contentMode = .scaleAspectFill
 
+
 PlaygroundPage.current.liveView = winnieImageView
 
 //: [Next](@next)
