@@ -14,5 +14,6 @@
         <page name='PropertyObserverSample'/>
         <page name='SafariVC'/>
         <page name='TextFieldSample1'/>
+        <page name='NotificationSample1'/>
     </pages>
 </playground>
