@@ -20,5 +20,6 @@
         <page name='ForSample1'/>
         <page name='TimerSample1'/>
         <page name='UIViewPropertyAnimatorSample1'/>
+        <page name='UIViewPropertyAnimatorSample2'/>
     </pages>
 </playground>
