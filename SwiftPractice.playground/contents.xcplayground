@@ -15,5 +15,8 @@
         <page name='SafariVC'/>
         <page name='TextFieldSample1'/>
         <page name='NotificationSample1'/>
+        <page name='RandomSample1'/>
+        <page name='RandomSample2'/>
+        <page name='ForSample1'/>
     </pages>
 </playground>
