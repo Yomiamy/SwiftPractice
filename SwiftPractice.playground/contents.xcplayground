@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
     <pages>
+        <page name='ArraySample1'/>
         <page name='AsyncAwaitSample1'/>
         <page name='DateFormat'/>
         <page name='ClassOptionalInit'/>
@@ -12,11 +13,11 @@
         <page name='HighOrderFunction'/>
         <page name='ImageWithOverlap'/>
         <page name='PropertyObserverSample'/>
-        <page name='SafariVC'/>
         <page name='TextFieldSample1'/>
         <page name='NotificationSample1'/>
         <page name='RandomSample1'/>
         <page name='RandomSample2'/>
+        <page name='SafariVC'/>
         <page name='ForSample1'/>
         <page name='TimerSample1'/>
         <page name='UIViewPropertyAnimatorSample1'/>
