@@ -18,5 +18,6 @@
         <page name='RandomSample1'/>
         <page name='RandomSample2'/>
         <page name='ForSample1'/>
+        <page name='TimerSample1'/>
     </pages>
 </playground>
