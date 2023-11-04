@@ -19,5 +19,6 @@
         <page name='RandomSample2'/>
         <page name='ForSample1'/>
         <page name='TimerSample1'/>
+        <page name='UIViewPropertyAnimatorSample1'/>
     </pages>
 </playground>

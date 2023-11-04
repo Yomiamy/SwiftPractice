@@ -15,4 +15,6 @@ Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
     }
 }
 
+print("After timer")
+
 //: [Next](@next)
