@@ -1,0 +1,16 @@
+PODS:
+  - TrustKit (3.0.3)
+
+DEPENDENCIES:
+  - TrustKit
+
+SPEC REPOS:
+  trunk:
+    - TrustKit
+
+SPEC CHECKSUMS:
+  TrustKit: 7858ea59d0e226b1457b2e9cc8b95d77ab21d471
+
+PODFILE CHECKSUM: 74977a978a46807e1fa90d53c089ea8be1ea917e
+
+COCOAPODS: 1.12.1
