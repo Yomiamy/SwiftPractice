@@ -19,9 +19,19 @@ class CustomTableViewController: UITableViewController {
 //        self.tableView.rowHeight = UITableView.automaticDimension
     }
     
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        2
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        "Section \(section)"
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         20
     }
+    
+    
     
 //    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        100
