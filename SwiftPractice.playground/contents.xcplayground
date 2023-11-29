@@ -22,5 +22,6 @@
         <page name='TimerSample1'/>
         <page name='UIViewPropertyAnimatorSample1'/>
         <page name='UIViewPropertyAnimatorSample2'/>
+        <page name='OptionalSample1'/>
     </pages>
 </playground>
