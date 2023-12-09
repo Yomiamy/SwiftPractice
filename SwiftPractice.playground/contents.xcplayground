@@ -23,6 +23,7 @@
         <page name='UIViewPropertyAnimatorSample1'/>
         <page name='UIViewPropertyAnimatorSample2'/>
         <page name='OptionalSample1'/>
+        <page name='ImageWithSystem1'/>
         <page name='CryptoKitSample1'/>
     </pages>
 </playground>
